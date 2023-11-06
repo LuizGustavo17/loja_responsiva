@@ -186,6 +186,9 @@ button{
     #divnone{
         display: none;
     }
+    nav{
+        height: 10vh;
+    }
 }
 @media (max-width: 640px) {
     #divnone{
@@ -291,7 +294,7 @@ button{
         
     }
     nav{
-        height: 7vh;
+        height: 10vh;
     }
     ul{
         display: block;
