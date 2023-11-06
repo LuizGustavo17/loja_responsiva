@@ -5,181 +5,287 @@
     font-family: 'Roboto', sans-serifs;
 }
 
-html {
-    overflow: hidden;
-}
 
-.container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-    height:180px;
-}
 
-header {
-    background-color: #304988;
-    padding-top: 6px;
-    color: #fff;
-}
-
-header>.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-    cursor: pointer;
-}
-
-nav {
-    padding: 20px 0;
-    display: flex;
-}
-#navbar{
-    max-height: 64px;
-}
-nav li {
-    list-style: none;
-    /*Tirar o ponto antes da palavras em destaque*/
-    display: inline;
-    margin-right: 16px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-nav li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-div .container {
+nav{
+    background-color: rgb(64, 122, 239);
+    color: white;
+    height: 5vh;
     display: flex;
 }
 
-.container-flex {
-    display: flex;
+#h1nav{
+    margin-left: 5vw;
+    
+}
+ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe a lista como flexbox */
 }
 
-#sobreLoja img {
-    max-width: 588px;
-    margin-right: 24px;
+ul li {
+    margin-right: 10px; /* Espaço entre os itens da lista */
+    margin-top: 0.8vw;
+    cursor:pointer;
+}
+ul :nth-child(1){
+    margin-left: 48vw;
+}
+body{
+    background-color: rgb(216, 219, 219);
 }
 
-section {
-    padding: 20px 0;
+#imagemloja{
+    margin-top: 4vh;
+    margin-left: 6.2vw;
+}
+#sobre{
+    float: right;
+
+}
+.h1azul{
+    color: rgb(64, 122, 239);
+    font-size:x-large;
+    margin-right: 50vw;
+    margin-top: 2vw;
 }
 
-section h2 {
-    margin-bottom: 16px;
-    border-bottom: 4px solid #2d28cf;
-    padding: 14px 2px;
-    color: #2d28cf;
-    font-style: oblique;
-}
-
-.container.produtos li h3 {
-    margin: 16px 0;
-}
-
-.lista-produtos {
-    /*display: flex;
-    list-style: none;
-    margin: 13px;*/
-    display: grid;
-    grid-template-columns: repeat(4, 24.25%);
-    list-style: none;
-    column-gap: 1rem;
-    row-gap: 5%;
-}
-
-.lista-produtos li {
-    margin: 7px;
-    width: 100%;
-    margin-bottom: 19px;
-}
-
-.lista-produtos li img {
-    width: 100%;
-}
-
-.lista-produtos h3 {
-    padding: 22px 0;
-}
-
-.lista-produtos p {
-    width: 100%;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 8px 0;
+hr{
     border: none;
-    background-color: #115385;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: italic;
-    cursor: pointer;
-    border-radius: 3px;
-    margin: 13px 0;
+    border-top: 0.3vh solid rgb(64, 122, 239); /* Cor e espessura da linha */
+    margin-top: 2vh; /* Espaçamento acima e abaixo da linha */
+    margin-bottom: 2vh; /* Espaçamento acima e abaixo da linha */
+    margin-right: 4vw;
 }
 
-@media screen and (min-width: 641px) and (max-width: 1023px) {
+#psobre{
+    margin-right: 2vw;
+    max-width: 40vw;
+    min-width: 20vw;
+}
 
+#productsh1{
+    margin-left: 10vw;
+}
+
+#productshr{
+    margin-left: 10vw;
+}
+.card {
+    width: 15vw;
+    margin: 0.2vw;
+    padding: 1vw;
+    text-align: center;
+    display: inline-block; /* Adicione esta linha para colocar os cards lado a lado */
+}
+#nth1{
+    margin-left: 16.5vw;
+}
+.pproduto{
+    max-width: 10vw;
+    padding-left: 2vw;
+}
+
+button{
+    color: fff;
+    background-color: rgb(64, 122, 239);
+    height: 4vh ;
+    width: 10vw;
+    border: none;
+    border-radius: 0.1vw;
+
+}
+#divnone{
+    display: none;
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
     body{
         display: flex;
-        justify-content: space-between;
+        color: white;
     }
-    .container {
+    .container, .products{
+        flex: 1;
+        color:rgb(216, 219, 219);
+        max-width: 48vw;
+    }
+    .container{
+        margin-right: 2vw;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+        gap: 1vw; /* Espaçamento entre os itens */
+    }
+    #sobre{
+        float: none; /* Remove o alinhamento à direita para telas de tablet */
+        clear: both; /* Limpa flutuações anteriores */
+        margin-top: 1vh; /* Adiciona um espaçamento no topo para mover o elemento para baixo */
+    }
+    #psobre{
+        margin-right: 0.2vw;
+        max-width: 40vw;
+        color:#000000;
+    }
+    #imagemloja{
+        margin-left: 0.1vh;
+    }
+    #h1nav{
+        font-size: medium;
+        margin-top: 1vh;
+    }
+    ul :nth-child(1){
+        margin-left: 15vw;
+    }
+    li{
+        padding-top: 0.4vh;
+        font-size: x-small;
+    }
+    #nth1{
+        margin-left: 0vw;
+    }
+    .imgcard{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 2vw;
+    }
+    .pproduto, h3{
+        color:#000000;
+       
+    }
+    button{
         
-        height:50px;
+        border-radius: 0.4vw;
+        width:20vw;
+        margin-left: 1.5vw;
     }
-
-    .container-flex{
+    .pproduto{
+        margin-left: 6.2vw;
+    }
+    h3{
+        margin-left: 8.7vw;
+    }
+    #productshr{
+        border: none;
+        border-top: 0.3vh solid rgb(64, 122, 239); /* Cor e espessura da linha */
+        margin-top: 2vh; /* Espaçamento acima e abaixo da linha */
+        margin-bottom: 2vh; /* Espaçamento acima e abaixo da linha */
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #productsh1{
+        margin-top: 0.3vh;
+        margin-left: 0vw;
+    }
+    .h1azul{
+        width:20vw;
+    }
+    hr, #psobre, #h1sobre, #imagemloja{
+        margin-left: 1vw;
+    }
+    #divnone{
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    #divnone{
+        display: block;
+        
+    }
+    .cards{
         display: flex;
         flex-direction: column;
     }
-
-    .lista-produtos{
-        display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas com larguras iguais */
-    grid-template-rows: repeat(2, 1fr);    /* 2 linhas com alturas iguais */
-    gap: 10px;
-    }
-    
-}
-
-@media screen and (max-width: 640px) {
-    body{
+    body {
         display: flex;
         justify-content: space-between;
+        align-items: stretch;
     }
-    .container {
+    .divnone, .products, .container{
+        flex: 1;
+        text-align: center;
+        max-width: 30vw;
+    }
+    #sobre{
+        float: none; /* Remove o alinhamento à direita para telas de tablet */
+        clear: both; /* Limpa flutuações anteriores */
+        margin-top: 1vh; /* Adiciona um espaçamento no topo para mover o elemento para baixo */
+    }
+    #psobre{
+        margin-right: 0.2vw;
+        max-width: 40vw;
+        color:#000000;
+    }
+    .pproduto, h3{
+        color:#000000;
+       
+    }
+    button{
         
-        max-width: none;
-        height: auto;
-        padding: 0 10px;
+        border-radius: 0.4vw;
+        width:20vw;
+        margin-left: 1.5vw;
     }
-
-    .container-flex{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        width: auto;
+    #h1nav{
+        font-size: medium;
+        margin-left: 1vw;
     }
-    body :first-child{
-        width: 220px;
+    #li1, #li2{
+        padding-top: 0.4vh;
+        font-size: xx-small;
+        margin-left: 1vw;
+    }
+    #imagemloja{
+        margin-left: 0.1vh;
+        max-width: 30vw;
+        max-height: 30vw;
+    }
+    #nth1{
+        margin-left: 0;
+    }
+    .imgcard{
+        max-width: 28vw;
+        max-height: 28vw;
+    }
+    #productshr{
+        border: none;
+        border-top: 0.3vh solid rgb(64, 122, 239); /* Cor e espessura da linha */
+        margin-top: 2vh; /* Espaçamento acima e abaixo da linha */
+        margin-bottom: 2vh; /* Espaçamento acima e abaixo da linha */
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #productsh1{
+        margin-top: 0.3vh;
+        margin-left: 0vw;
+    }
+    button{
+        
+        border-radius: 0.4vw;
+        width:20vw;
+        margin-left: 3.5vw;
+    }
+    h3{
+        margin-left: 9.5vw;
+    }
+    .pproduto{
+        margin-left: 6.5vw;
+    }
+    #nth3{
+        margin-top: 8vh;
+        margin-left: -20vw;
+    }
+     #nth4{
+        margin-left: -4vw;
+        display: block;
+    }
+    #nth2, #nth4{
+        margin-top: 20vw;
+    }
+    #h1sobre{
+        font-size: x-large;
+        max-width: 30vw;
+        
     }
     
-    h1{
-        font-size: 24px;
-        margin: 5px;
-    }
-    .lista-produtos{
-        display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas com larguras iguais */
-    grid-template-rows: repeat(2, 1fr);    /* 2 linhas com alturas iguais */
-    gap: 10px;
-    }
 }
